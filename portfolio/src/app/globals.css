@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+ padding: 0;
+ margin: 0;
+  
+
+}
+*{
+  box-sizing: border-box;
+  /* text-align: center; */
+}
+h1,h2,h3,h4,span{
+  width: auto;
+}
+
+.bakground-image-header{
+  background: url("/port_header_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header-container{
+  /* background: rgba(24, 71, 147, 0.8); */
+  backdrop-filter:blur(1px);
+  background: rgba(13, 13, 14, 0.9);
+}
+.my-passon-bg{
+   background: url("/what_i_do.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.my-passon-bg-blur{
+   background: rgba(0, 0, 0, 0.8);
+  backdrop-filter:blur(2px);
+}
+
+.passion-wrapper>:nth-child(1){
+  border-right: 0.5px solid #fff;
+  border-bottom: 0.5px solid #fff;
+}
+.passion-wrapper>:nth-child(4){
+  border-top: 0.5px solid #fff;
+  border-left: 0.5px solid #fff;
+}
