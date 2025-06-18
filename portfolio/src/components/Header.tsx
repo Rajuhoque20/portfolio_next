@@ -35,7 +35,7 @@ export default function Header() {
         </div>
         <div className='mt-55 flex flex-col items-center justify-center gap-6'>
             <h1 className='text-8xl font-bold'>Raju Hoque</h1>
-            <span className='text-3xl'>Front End Software Engineer</span>
+            <span className='text-3xl' style={{color:"#8892b0"}}>Front End Software Engineer</span>
         </div>
         <div className='mt-auto mb-10 flex flex-col gap-3 justify-center items-center'>
             <span>LEARN MORE</span>
