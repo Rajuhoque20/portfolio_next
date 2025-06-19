@@ -44,7 +44,7 @@ h1,h2,h3,h4,span{
 .header-container{
   /* background: rgba(24, 71, 147, 0.8); */
   backdrop-filter:blur(1px);
-  background: rgba(13, 13, 14, 0.9);
+  background: rgba(13, 13, 14, 0.7);
 }
 .my-passon-bg{
    background: url("/what_i_do.jpg");
@@ -52,7 +52,7 @@ h1,h2,h3,h4,span{
   background-size: 100% 100%;
 }
 .my-passon-bg-blur{
-   background: rgba(0, 0, 0, 0.9);
+   background: rgba(0, 0, 0, 0.7);
   backdrop-filter:blur(2px);
 }
 

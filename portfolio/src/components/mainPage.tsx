@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Header from './Header'
 import Image from 'next/image'
 
@@ -8,6 +8,7 @@ export default function MainPage() {
         <Header/>
         <About/>
         <MyPasson/>
+        <Skills/>
     </div>
   )
 }
@@ -16,7 +17,7 @@ export const About=()=>{
     return(
         <div className='w-full p-30 flex gap-20' style={{background: "#0a192f"}}>
             <div className='w-2/3 flex gap-8 flex-col'>
-            <h1 className='text-5xl font-bold'>Hey, I'm Raju.</h1>
+            <Title>Hey, I'm Raju.</Title>
             
             <TitleBrake/>
             <span className='leading-[2]'>
@@ -68,14 +69,15 @@ export const MyPasson=()=>{
     return(
         <div className="my-passon-bg" >
             <div className='my-passon-bg-blur flex flex-col  p-30 gap-8'>
-                 <h1 className='text-5xl font-bold'>What I Do</h1>
+                 <Title>What I Do</Title>
                  <TitleBrake/>
 
                  <div className='grid grid-cols-2 passion-wrapper'>
                     {myPassionData?.map((item)=>{
                         return(
                             <div key={item.title} className='p-10 gap-5 flex flex-col'>
-                                <h2 className='text-2xl font-semibold'>{item.title}</h2>
+
+                                <SubTitle1>{item.title}</SubTitle1>
                                 <span className='leading-[2]'>{item.content}</span>
                             </div>
                         )
@@ -88,10 +90,108 @@ export const MyPasson=()=>{
     )
 }
 
+const developmentSkills=[
+    "JavaScript",
+    "React",
+    "TypeScript",
+    "Next",
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+    "Ant Design",
+    "Redux",
+    "Zustand",
+    "Webpak",
+    "RTL",
+    "Jest"
+];
+
+const tools=[
+    "Git/Github",
+    "Postman",
+    "MongoDB Compass",
+    "Redux Toolkit",
+    "Chrome Dev Tools"
+];
+
+const knowledges=[
+     "Angular",
+    "Node Js",
+    "MongoDB",
+    "Bootsrap",
+    "ECMAScript 6"
+];
+
+export const Skills=()=>{
+    return(
+        <div className='w-full p-30 flex flex-col gap-8' style={{background: "#0a192f"}}>
+            
+            <Title>Skills</Title>
+            <TitleBrake/>
+            
+            
+            <div className='flex justify-between'>
+                <div >
+                    <SubTitle1>DVELOPMENT</SubTitle1>
+                    <div  className='grid grid-cols-3 gap-2 mt-5'>
+                        {developmentSkills?.map((item)=>{
+                            return(
+                                <div key={item} className='rounded-full w-[120px] h-[120px] border-1 border-indigo-500 flex items-center justify-center'>
+                                    <span>{item}</span>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+
+                 <div>
+                    <SubTitle1>TOOLS</SubTitle1>
+                    <div className='mt-5 flex flex-col gap-5'>
+                        {tools?.map((item)=>{
+                            return(
+                                <div  key={item} className='border-1 border-indigo-200 border-x-indigo-500 p-5 rounded-md'>
+                                    <span>{item}</span>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+
+                 <div>
+                    <SubTitle1>KNOWLEDGE</SubTitle1>
+                    <div className='mt-5 flex flex-col gap-5'>
+                        {knowledges?.map((item)=>{
+                            return(
+                                <div  key={item} className="border-1 border-indigo-200 border-l-indigo-500 p-5 rounded-md">
+                                    <span>{item}</span>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+    )
+}
+
 
 export const TitleBrake=()=>{
     return(
-         <hr className='w-25 h-0.5 bg-linear-to-bl from-violet-500 to-fuchsia-500' style={{border:"0"}}/>
+         <hr className='w-25 h-0.5 bg-linear-to-bl from-violet-500 to-fuchsia-500 border-none' />
+    )
+}
+
+export const Title=({children}:{children:ReactNode})=>{
+    return(
+        <h1 className='text-5xl font-bold'>{children}</h1>
+    )
+}
+
+export const SubTitle1=({children}:{children:ReactNode})=>{
+    return(
+        <h2 className='text-2xl font-semibold'>{children}</h2>
     )
 }
 
