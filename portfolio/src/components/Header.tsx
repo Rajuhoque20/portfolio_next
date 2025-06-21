@@ -1,6 +1,5 @@
 
 'use client'
-import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { HiArrowCircleUp } from "react-icons/hi";
 
@@ -12,7 +11,6 @@ const navLinks=[
     "Contact",
 ];
 
-
 export default function Header() {
   const headerRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
@@ -23,7 +21,7 @@ export default function Header() {
         setIsInView(entry.isIntersecting);
       },
       {
-        threshold: 0.1, // Trigger when at least 10% of the element is visible
+        threshold: 0.1, 
       }
     );
 
@@ -49,7 +47,6 @@ export default function Header() {
     })
   }
 }
-
 
   return (
     <div className='w-full h-screen bakground-image-header' id="header" >
