@@ -64,12 +64,12 @@ export default function Contact() {
                 ref={formRef}
                 className='w-4/9 flex flex-col gap-10' onSubmit={(e)=>{
                     e.preventDefault();
-                    const form=e.target.elements;
-                    const name=form.name.value;
-                    const email=form.email.value;
-                    const subject=form.subject.value;
-                    const message=form.message.value;
-                    console.log("form",name, email, subject,message);
+                    const form = e.target as HTMLFormElement;
+                    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+                    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+                    const subject = (form.elements.namedItem("subject") as HTMLInputElement).value;
+                        const message = (form.elements.namedItem("message") as HTMLInputElement).value;
+                 
                     sendEmail({name, email, subject,message});
                 }}>
                     <div className='flex flex-col gap-3'>

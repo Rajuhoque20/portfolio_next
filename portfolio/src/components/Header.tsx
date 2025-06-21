@@ -11,29 +11,29 @@ const navLinks=[
 ];
 
 export default function Header() {
-  const headerRef = useRef(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
+useEffect(() => {
+  const target = headerRef.current;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1, 
-      }
-    );
+  if (!target) return;
 
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setIsInView(entry.isIntersecting);
+    },
+    {
+      threshold: 0.1,
     }
+  );
 
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, []);
+  observer.observe(target);
+
+  return () => {
+    observer.unobserve(target);
+  };
+}, []);
+
 
   const getScrollView=(index:number)=>{
   const sectionId=navLinks[index];

@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { HiArrowCircleUp } from "react-icons/hi";
-import MainPage from "src/components/mainPage";
 
+import MainPage from "src/components/mainPage";
 export default function Home() {
   return (
     <>
