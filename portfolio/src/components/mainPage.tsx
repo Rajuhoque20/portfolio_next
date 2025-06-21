@@ -1,21 +1,29 @@
 import React, { ReactNode } from 'react'
 import Header from './Header'
 import Image from 'next/image'
+import Experience from './Experience'
+import Projects from './Projects'
+import Contact from './Contact'
+import Footer from './Footer'
 
 export default function MainPage() {
   return (
     <div  className="w-full h-max flex flex-col h-max overflow-y-auto overflow-x-hidden">
         <Header/>
         <About/>
-        <MyPasson/>
+        <MyPassion/>
         <Skills/>
+        <Experience/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
     </div>
   )
 }
 
 export const About=()=>{
     return(
-        <div className='w-full p-30 flex gap-20' style={{background: "#0a192f"}}>
+        <div className='w-full p-30 flex gap-20' style={{background: "#0a192f"}} id="About">
             <div className='w-2/3 flex gap-8 flex-col'>
             <Title>Hey, I'm Raju.</Title>
             
@@ -64,11 +72,11 @@ const myPassionData=[
         content:"I manage code merging workflows to ensure smooth integration across development branches. By following version control best practices, I help maintain a clean and conflict-free codebase. I also create optimized, production-ready builds that are efficient, scalable, and deployment-friendly"
     }
 ];
-export const MyPasson=()=>{
+export const MyPassion=()=>{
     
     return(
-        <div className="my-passon-bg" >
-            <div className='my-passon-bg-blur flex flex-col  p-30 gap-8'>
+        <div className="my-passon-bg" id="passion">
+            <div className='my-passon-bg-blur flex flex-col  p-30 gap-8' >
                  <Title>What I Do</Title>
                  <TitleBrake/>
 
@@ -101,7 +109,7 @@ const developmentSkills=[
     "Ant Design",
     "Redux",
     "Zustand",
-    "Webpak",
+    "Webpack",
     "RTL",
     "Jest"
 ];
@@ -124,13 +132,13 @@ const knowledges=[
 
 export const Skills=()=>{
     return(
-        <div className='w-full p-30 flex flex-col gap-8' style={{background: "#0a192f"}}>
+        <div className='w-full p-30 flex flex-col gap-8' style={{background: "#0a192f"}} id="Skills">
             
             <Title>Skills</Title>
             <TitleBrake/>
             
             
-            <div className='flex justify-between'>
+            <div className='flex justify-between mt-10'>
                 <div >
                     <SubTitle1>DVELOPMENT</SubTitle1>
                     <div  className='grid grid-cols-3 gap-2 mt-5'>

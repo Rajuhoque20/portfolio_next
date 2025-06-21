@@ -1,32 +1,73 @@
+
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { HiArrowCircleUp } from "react-icons/hi";
 
 const navLinks=[
     "About",
+     "Skills",
     "Experience",
-    "Work",
-    "Contact"
-]
+    "Projects",
+    "Contact",
+];
+
 
 export default function Header() {
+  const headerRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1, // Trigger when at least 10% of the element is visible
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
+
+  const getScrollView=(index:number)=>{
+  const sectionId=navLinks[index];
+  const targetElement=document.getElementById(sectionId);
+  if(targetElement)
+  {
+    targetElement.scrollIntoView({
+      behavior:"smooth",
+      block:"start",
+    })
+  }
+}
+
+
   return (
-    <div className='w-full h-screen bakground-image-header' >
-      <div className='header-container h-full w-full flex flex-col place-items-center'>
-        <div className='flex items-center justify-between w-full p-8'>
-            <div  style={{ color: "#64ffda", border: "2px solid #64ffda" }}
-  className="text-3xl w-[40px] h-[40px] inline-flex items-center justify-center rounded-sm">
-            <span
- 
->
-  R
-</span>
-</div>
+    <div className='w-full h-screen bakground-image-header' id="header" >
+      <div className='header-container h-full w-full flex flex-col place-items-center' >
+        <div className='flex items-center justify-between w-full p-8' ref={headerRef}>
+              <div 
+                  className="text-3xl w-[40px] h-[40px] inline-flex items-center justify-center rounded-sm letter-icon">
+                    <span>R</span>
+                </div>
+              
             <div className='flex items-center justify-center gap-10'>
                 {navLinks?.map((item,index)=>{
                     return(
-                        <div key={item} className='flex items-center justify-center gap-2'>
-                            <span className='text-violet-950' style={{color:"#64ffda"}}>{index+1}.</span>
-                            <span>{item}</span>
+                        <div key={item} className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{
+                          getScrollView(index);
+                        }}>
+                            <span style={{color:"#64ffda"}}>{index+1}.</span>
+                            <span className='nav-item'>{item}</span>
                         </div>
                     )
                 })}
@@ -35,14 +76,16 @@ export default function Header() {
         </div>
         <div className='mt-55 flex flex-col items-center justify-center gap-6'>
             <h1 className='text-8xl font-bold'>Raju Hoque</h1>
-            <span className='text-3xl' style={{color:"#8892b0"}}>Front End Software Engineer</span>
+            <span className='text-3xl' style={{color:"#06112e", fontWeight:"600"}}>FRONTEND SOFTWARE ENGINEER</span>
         </div>
-        <div className='mt-auto mb-10 flex flex-col gap-3 justify-center items-center'>
-            <span>LEARN MORE</span>
+        <div className='mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer' onClick={()=>{
+          getScrollView(0);
+        }}>
+            <span className='nav-item'>LEARN MORE</span>
             <svg width={20} height={20}  viewBox='0 0 20 20'>
                <polyline
-               stroke='#fff'
-               strokeWidth={1}
+               stroke='#64ffda'
+               strokeWidth={2}
                points='0,0 10,10 20,0'
                fill='none'
                />
@@ -51,6 +94,20 @@ export default function Header() {
         </div>
         
       </div>
+      {!isInView&&<div style={{position:"fixed", right:"20px", bottom:"20px", zIndex:60000}} className='cursor-pointer' onClick={()=>
+        {
+          const targetElement=document.getElementById("header");
+        if(targetElement)
+        {
+          targetElement.scrollIntoView({
+            behavior:"smooth",
+            block:"start",
+          })
+        }
+        }
+      }>
+       <HiArrowCircleUp size={60} color='#fff'/>
+    </div>}
     </div>
   )
 }
