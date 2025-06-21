@@ -52,7 +52,7 @@ export default function Header() {
       <div className='header-container h-full w-full flex flex-col place-items-center' >
         <div className='flex items-center justify-between w-full p-8' ref={headerRef}>
               <div 
-                  className="text-3xl w-[42px] h-[42px] inline-flex items-center justify-center rounded-sm letter-icon">
+                  className="text-3xl w-[40px] h-[40px] inline-flex items-center justify-center rounded-sm letter-icon">
                     <span >R</span>
                 </div>
               
