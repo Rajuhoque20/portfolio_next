@@ -39,16 +39,52 @@ const hiringSkills=[
     "Ant Design"
 ];
 
+const projects=[
+    {
+        title:"LocoSim – Locomotive Simulation",
+        content:"Built a real-time simulation platform to monitor train movement, speed, and location for driver training purposes. Integrated a Driver Display Unit (DDU) to visualize live track details such as signals, signage, curvature, and gradient during motion. Simulated accurate train behavior across varying route conditions. Focused on responsive UI and seamless real-time data rendering for high-fidelity simulations.",
+        skills:locoSkills
+    },
+    {
+        title:"Elastotec-LaggingSelect",
+        content:"Developed a web portal that allows clients to create and manage projects, conveyors, and pulleys for machine tracking. Enabled analysis of pulley details based on products with graphical representations of simulated outputs. Single-handedly handled UI implementation, code optimization, and feature enhancements. Focused on delivering a seamless and efficient user experience.",
+        skills:elastotecSkills,
+    },
+    {
+        title:"NEW PMT",
+        content:"Built an online portal to manage associate, department, team, and project profiles, along with tracking attendance, leaves, and overall organizational activities. Led the complete UI implementation with custom global components like tables and modals. Introduced Zustand for efficient state management. Ensured full mobile responsiveness using media queries.",
+        skills:pmtSkills,
+    },
+    {
+        title:"Hiring Management",
+        content:"Developed a recruitment gateway platform enabling businesses to manage the entire hiring process, including screening, interview scheduling, and shortlisting. Contributed to complete UI implementation using a blend of class and functional components. Utilized Ant Design for UI, along with Redux and Redux Toolkit for state management. Ensured a responsive design optimized for mobile devices.",
+        skills:hiringSkills
+    },
+    {
+        title:"Ibelong",
+        content:"Developed a web portal for company associates to nominate and participate in events like sports, music, dance, photography, and acting. Collaborated with the team to implement the UI and integrate APIs. Introduced Redux Toolkit for efficient state management. Ensured full mobile responsiveness for an optimized user experience across devices.",
+        skills:hiringSkills,
+    }
+]
+
 export default function Projects() {
   return (
      <div className='project-bg' id="Projects">
-            <div className='w-full p-5 sm:p-30 flex flex-col gap-8 project-bg-blur h-full w-full'>
+            <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8 project-bg-blur h-full w-full'>
             <Title>Projects</Title>
             <TitleBrake/>
 
-            <div className='mt-10'>
+            <ProjectWebView/>
+            <ProjectMobView/>
+            </div>
+        </div>
+  )
+}
+const ProjectWebView=()=>{
+    return(
+        <div className='mt-0 sm:mt-10'>
                 
-                <svg viewBox='0 0 1120 2450' >
+                <svg viewBox='0 0 1120 2450' className='hidden sm:block'>
                     <line
                     x1={560}
                     y1={50}
@@ -174,10 +210,25 @@ export default function Projects() {
 
 
                 </svg>
+                
             </div>
-            </div>
+    )
+}
+export const ProjectMobView=()=>{
+    return(
+        <div className='flex sm:hidden flex-col gap-5'>
+            {projects?.map((item)=>{
+                return(
+                     <ProjectCard key={item?.title}>
+                                <SubTitle1>{item?.title}</SubTitle1>
+                                <span className='color1 leading-7'>{item?.content}</span>
+                                 <DevelopmentSkills skills={item?.skills}/>
+                     </ProjectCard>       
+
+                )
+            })}
         </div>
-  )
+    )
 }
 
 

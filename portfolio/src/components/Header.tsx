@@ -71,8 +71,8 @@ useEffect(() => {
             </div>
         </div>
         <div className='mt-10 sm:mt-55 flex flex-col items-center justify-center gap-6'>
-            <h1 className=' text-4xl sm:text-8xl font-bold'>Raju Hoque</h1>
-            <span className='text-xl sm:text-3xl' style={{color:"#06112e", fontWeight:"600"}}>FRONTEND SOFTWARE ENGINEER</span>
+            <h1 className=' text-4xl sm:text-8xl font-bold text-shadow-lg/20'>Raju Hoque</h1>
+            <span className='text-xl sm:text-3xl text-shadow-lg/20' style={{color:"#08f7f3", fontWeight:"600"}}>FRONTEND SOFTWARE ENGINEER</span>
         </div>
         <div className='mt-10 sm:mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer' onClick={()=>{
           getScrollView(0);

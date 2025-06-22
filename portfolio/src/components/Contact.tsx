@@ -74,19 +74,19 @@ export default function Contact() {
                 }}>
                     <div className='flex flex-col gap-3'>
                         <label htmlFor='name'>NAME</label>
-                        <input required type='text' name='name' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0' placeholder='Enter Name'/>
+                        <input required type='text' name='name' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0' placeholder='Enter name'/>
                     </div>
                      <div className='flex flex-col gap-3'>
                         <label htmlFor='name'>EMAIL</label>
-                        <input required type='text' name='email' placeholder='Enter Email' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
+                        <input required type='text' name='email' placeholder='Enter email' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
                      <div className='flex flex-col gap-3'>
                         <label htmlFor='name'>SUBJECT</label>
-                        <input required type='text' name='subject' placeholder='Enter Subjext' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
+                        <input required type='text' name='subject' placeholder='Enter subject' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
                     <div className='flex flex-col gap-3'>
                         <label htmlFor='name'>MESSAGE</label>
-                        <input required type='text'  name='message' placeholder='Enter Message' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
+                        <input required type='text'  name='message' placeholder='Enter message' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
 
                     {response?.status==="success"&&
