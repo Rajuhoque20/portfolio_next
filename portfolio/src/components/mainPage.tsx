@@ -23,7 +23,7 @@ export default function MainPage() {
 
 export const About=()=>{
     return(
-        <div className='w-full p-5 sm:p-30 flex flex-col sm:flex-row gap-5 sm:gap-20' style={{background: "#0a192f"}} id="About">
+        <div className='w-full p-5 sm:p-30 flex flex-col sm:flex-row gap-5 sm:gap-20 about'  id="About">
             <div className=' w-full sm:w-2/3 flex gap-5 sm:gap-8 flex-col'>
            <Title>Hey, I&apos;m Raju.</Title>
             <TitleBrake/>
@@ -131,7 +131,7 @@ const knowledges=[
 
 export const Skills=()=>{
     return(
-        <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8' style={{background: "#0a192f"}} id="Skills">
+        <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8 skill'  id="Skills">
             
             <Title>Skills</Title>
             <TitleBrake/>

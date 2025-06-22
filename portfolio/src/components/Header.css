@@ -1,0 +1,181 @@
+.bakground-image-header{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header-container{
+    background: conic-gradient(rgb(41, 3, 3), rgb(9, 23, 34), green, blue, black);
+     --bg-color:rgb(57, 5, 39);
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+.nav-item{
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.nav-item:hover{
+  color: #64ffda;
+  transform:scale(1.05);
+}
+.letter-icon{
+  color: #64ffda;
+  animation: rotate_border 1000ms 1s  ease-in infinite forwards ;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.letter-icon:hover{
+  transform: scale(1.1);
+}
+.resume-button{
+  background-color: transparent;
+  color: #64ffda;
+  height: 2.5rem;
+  width: 6rem;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  border: 1px solid #64ffda;
+  z-index: 1;
+}
+.resume-button:hover{
+  color: #0a0a0a;
+  font-weight: 600;
+}
+.resume-button::before{
+  content: '';
+  position: absolute;
+  background-color: #64ffda;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.2rem;
+  z-index: -1;
+  width: 0;
+   transition: all 0.5s ease-in;
+}
+
+.resume-button:hover::before{
+ width: 100%;
+}
+
+@keyframes rotate_border {
+   0%{
+    border: 2px solid #282d42;
+    border-left:2px solid #64ffda;
+   }
+    25%{
+      border: 2px solid #282d42;
+    border-top:2px solid #64ffda;
+   }
+   50%{
+       border: 2px solid #282d42;
+       border-right:2px solid #64ffda;
+   }
+    100%{
+       border: 2px solid #282d42;
+       border-bottom:2px solid #64ffda;
+   }
+  
+}
+
+.navbar button, .navbar span {
+  animation: slideRight 0.4s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--nav-item));
+  opacity: 0;
+}
+
+@keyframes slideRight {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+ 
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
+.name-wrapper{
+    --border-radius:0.5rem;
+      --background: #2b2d2f;
+      background:var(--background) ;
+      padding: 1rem;
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.name-wrapper:hover::before{
+    animation-play-state: paused;
+}
+.name-wrapper::before, .name-wrapper::after{
+    content: '';
+    position: absolute;
+}
+.name-wrapper::before{
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+   background-image: conic-gradient(rgb(215, 6, 142) 0deg, transparent 180deg, rgb(215, 6, 142) 180deg, transparent 360deg);
+    border-radius: 0.5rem;
+    inset: -100%;
+    width: 300%;
+    height: 300%;
+    animation: animate-border 2s linear infinite;
+    z-index: -2;
+}
+@keyframes  animate-border  {
+    to{
+        transform: rotate(-360deg);
+    }
+    
+}
+
+.name-wrapper::after{
+    --inset: 4px;
+    inset: var(--inset);
+    background: #111;
+    border-radius: calc(var(--border-radius)-var(--inset));
+    transition: all 0.3s linear;
+    z-index: -1;
+}
+.name-wrapper:hover::after{
+    background: var(--background);
+}
+
+.name-wrapper>*, .learn-more{
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out 1s 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.intro{
+    background:linear-gradient(to right,#fc72ff, #8f68ff, #8f68ff, #fc72ff);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200%;
+    font-weight: 700;
+    animation: animate-gradient 1.2s linear infinite;
+    
+}
+@keyframes  animate-gradient {
+    to{
+        background-position: 200%;
+    } 
+}

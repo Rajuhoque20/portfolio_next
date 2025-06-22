@@ -19,7 +19,7 @@ const developmentSkills=[
 
 export default function Experience() {
   return (
-    <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8' style={{background: "#1b1b1b"}} id="Experience">
+    <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8 experience'  id="Experience">
         <Title>Experience</Title>
         <TitleBrake/>
         <div className='flex flex-col sm:flex-row gap-5 sm:gap-10 mt-5 sm:mt-10'>

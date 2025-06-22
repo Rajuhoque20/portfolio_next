@@ -25,33 +25,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
  padding: 0;
  margin: 0;
-  
-
 }
 *{
   box-sizing: border-box;
-  /* text-align: center; */
 }
 h1,h2,h3,h4,span{
   width: auto;
 }
 
-.bakground-image-header{
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.header-container{
-    background: conic-gradient(rgb(41, 3, 3), rgb(9, 23, 34), green, blue, black);
-}
-.my-passon-bg{
-   background: url("/what_i_do.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
 .my-passon-bg-blur{
-   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter:blur(2px);
-  background-image: radial-gradient(rgb(8, 8, 202), rgb(48, 4, 30), rgb(4, 4, 63),  rgb(2, 25, 80));
+  --bg:rgb(4, 4, 63);
+  background-image: radial-gradient(var(--bg), transparent, var(--bg),transparent,  var(--bg));
 }
 
 .passion-wrapper>:nth-child(1){
@@ -63,18 +47,11 @@ h1,h2,h3,h4,span{
   border-left: 0.5px solid #fff;
 }
 
-.project-bg{
-   background: url("/project_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  
-  /* filter: grayscale(5) ; */
-}
 .project-bg-blur{
-  background: rgba(32, 33, 35, 0.7);
-  backdrop-filter:blur(2px);
   height: max-content;
   background-image: radial-gradient(rgb(8, 8, 202), rgb(48, 4, 30), rgb(4, 4, 63),  rgb(2, 25, 80));
+  --bg-color:rgb(8, 8, 202);
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
 }
 
 .comment-wrapper {
@@ -85,54 +62,12 @@ h1,h2,h3,h4,span{
 .color1{
   color: #94a3b8;
 }
-.contact-bg{
-    background: url("/contact_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 .contact-bg-blur{
-    background: rgba(0, 4, 12, 0.8);
-    backdrop-filter:blur(10px);
+   --bg:rgb(45, 4, 33);
+  background-image: radial-gradient(var(--bg), transparent, var(--bg),transparent,  var(--bg));
 }
 
-.nav-item{
-  color: #fff;
-  transition: all 0.2s ease;
-}
-.nav-item:hover{
-  color: #64ffda;
-  transform:scale(1.05);
-}
-.letter-icon{
-  color: #64ffda;
-  /* border: 2px solid #64ffda; */
-  animation: rotate_border 1000ms  ease-in infinite forwards ;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-.letter-icon:hover{
-  transform: scale(1.1);
-}
-
-@keyframes rotate_border {
-   0%{
-    border: 2px solid #282d42;
-    border-left:2px solid #64ffda;
-   }
-    25%{
-      border: 2px solid #282d42;
-    border-top:2px solid #64ffda;
-   }
-   50%{
-       border: 2px solid #282d42;
-       border-right:2px solid #64ffda;
-   }
-    100%{
-       border: 2px solid #282d42;
-       border-bottom:2px solid #64ffda;
-   }
-  
-}
 
 @media (max-width:700px) {
   
@@ -142,11 +77,25 @@ h1,h2,h3,h4,span{
 .passion-wrapper>:nth-child(4){
   border: 0;
 }
-/* .my-passon-bg{
-  background: #1b1b1b;
-} */
-/* .my-passon-bg-blur{
-   background: none;
-  backdrop-filter:blur(0px);
-} */
 }
+
+.skill{
+  --bg-color:#0a192f;
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+.experience{
+  --bg-color:#1b1b1b;
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+
+.about{
+  --bg-color:#0a192f;
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+.footer{
+  --bg-color:#0a192f;
+     background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+
+
+

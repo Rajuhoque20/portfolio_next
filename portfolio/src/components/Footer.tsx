@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <div  className='w-full p-10 flex flex-col gap-8  h-full w-full items-center bg-linear-to-r from-cyan-500 to-blue-500'>
+    <div  className='w-full p-10 flex flex-col gap-8  h-full w-full items-center footer'>
       <div className="flex gap-5">
          <a
         href="https://www.linkedin.com/in/rajuhoque97"
