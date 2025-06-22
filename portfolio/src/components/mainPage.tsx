@@ -23,11 +23,9 @@ export default function MainPage() {
 
 export const About=()=>{
     return(
-        <div className='w-full p-30 flex gap-20' style={{background: "#0a192f"}} id="About">
-            <div className='w-2/3 flex gap-8 flex-col'>
+        <div className='w-full p-5 sm:p-30 flex flex-col sm:flex-row gap-5 sm:gap-20' style={{background: "#0a192f"}} id="About">
+            <div className=' w-full sm:w-2/3 flex gap-5 sm:gap-8 flex-col'>
            <Title>Hey, I&apos;m Raju.</Title>
-
-            
             <TitleBrake/>
             <span className='leading-[2]'>
                 I am a front-end developer with a strong passion for building accessible, pixel-perfect user interfaces that harmonize design and engineering. I thrive at the intersection of aesthetics and functionality—crafting experiences that are visually refined, technically robust, and optimized for both performance and usability
@@ -36,7 +34,7 @@ export const About=()=>{
                 Currently, I work as a frontend engineer at Brigosha, where I focus on accessibility and inclusive design. I help develop and maintain the UI component library that powers our platform, ensuring every interface meets modern web accessibility standards and delivers a seamless experience for all users.
             </span>
             </div>
-            <div className='flex relative p-5 w-[350px] h-[350px]'>
+            <div className='flex relative p-5 mx-auto w-[350px] h-[350px]'>
                 <Image
                 src={'/profile_image.jpg'}
                 alt='raju'
@@ -77,14 +75,14 @@ export const MyPassion=()=>{
     
     return(
         <div className="my-passon-bg" id="passion">
-            <div className='my-passon-bg-blur flex flex-col  p-30 gap-8' >
+            <div className='my-passon-bg-blur flex flex-col p-5 sm:p-30 gap-8' >
                  <Title>What I Do</Title>
                  <TitleBrake/>
 
-                 <div className='grid grid-cols-2 passion-wrapper'>
+                 <div className='grid grid-cols-1 gap-10 sm:gap-0 sm:grid-cols-2 passion-wrapper'>
                     {myPassionData?.map((item)=>{
                         return(
-                            <div key={item.title} className='p-10 gap-5 flex flex-col'>
+                            <div key={item.title} className='p-0 sm:p-10 gap-3 sm:gap-5 flex flex-col'>
 
                                 <SubTitle1>{item.title}</SubTitle1>
                                 <span className='leading-[2]'>{item.content}</span>
@@ -133,13 +131,13 @@ const knowledges=[
 
 export const Skills=()=>{
     return(
-        <div className='w-full p-30 flex flex-col gap-8' style={{background: "#0a192f"}} id="Skills">
+        <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8' style={{background: "#0a192f"}} id="Skills">
             
             <Title>Skills</Title>
             <TitleBrake/>
             
             
-            <div className='flex justify-between mt-10'>
+            <div className='flex flex-col sm:flex-row justify-between mt-10 gap-5'>
                 <div >
                     <SubTitle1>DVELOPMENT</SubTitle1>
                     <div  className='grid grid-cols-3 gap-2 mt-5'>
@@ -194,13 +192,13 @@ export const TitleBrake=()=>{
 
 export const Title=({children}:{children:ReactNode})=>{
     return(
-        <h1 className='text-5xl font-bold'>{children}</h1>
+        <h1 className='text-2xl sm:text-5xl font-bold'>{children}</h1>
     )
 }
 
 export const SubTitle1=({children}:{children:ReactNode})=>{
     return(
-        <h2 className='text-2xl font-semibold'>{children}</h2>
+        <h2 className='text-xl sm:text-2xl font-semibold'>{children}</h2>
     )
 }
 

@@ -133,3 +133,20 @@ h1,h2,h3,h4,span{
    }
   
 }
+
+@media (max-width:700px) {
+  
+  .passion-wrapper>:nth-child(1){
+ border: 0;
+}
+.passion-wrapper>:nth-child(4){
+  border: 0;
+}
+.my-passon-bg{
+  background: #1b1b1b;
+}
+.my-passon-bg-blur{
+   background: none;
+  backdrop-filter:blur(0px);
+}
+}

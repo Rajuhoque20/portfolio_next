@@ -42,7 +42,7 @@ const hiringSkills=[
 export default function Projects() {
   return (
      <div className='project-bg' id="Projects">
-            <div className='w-full p-30 flex flex-col gap-8 project-bg-blur h-full w-full'>
+            <div className='w-full p-5 sm:p-30 flex flex-col gap-8 project-bg-blur h-full w-full'>
             <Title>Projects</Title>
             <TitleBrake/>
 

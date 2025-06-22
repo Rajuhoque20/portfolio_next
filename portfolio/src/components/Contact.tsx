@@ -58,11 +58,11 @@ export default function Contact() {
 
   return (
     <div className='contact-bg' id="Contact">
-            <div className='w-full p-30 flex contact-bg-blur flex-col gap-8  h-full w-full items-center'>
+            <div className='w-full p-5 sm:p-30 flex contact-bg-blur flex-col gap-8  h-full w-full items-center'>
                 <Title>Get In Touch</Title>
                 <form 
                 ref={formRef}
-                className='w-4/9 flex flex-col gap-10' onSubmit={(e)=>{
+                className=' w-full sm:w-4/9 flex flex-col gap-10' onSubmit={(e)=>{
                     e.preventDefault();
                     const form = e.target as HTMLFormElement;
                     const name = (form.elements.namedItem("name") as HTMLInputElement).value;

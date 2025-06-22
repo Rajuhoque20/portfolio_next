@@ -48,7 +48,7 @@ useEffect(() => {
 }
 
   return (
-    <div className='w-full h-screen bakground-image-header' id="header" >
+    <div className='w-full h-1/3 sm:h-screen bakground-image-header' id="header" >
       <div className='header-container h-full w-full flex flex-col place-items-center' >
         <div className='flex items-center justify-between w-full p-8' ref={headerRef}>
               <div 
@@ -56,7 +56,7 @@ useEffect(() => {
                     <span >R</span>
                 </div>
               
-            <div className='flex items-center justify-center gap-10'>
+            <div className='hidden sm:flex items-center justify-center gap-10'>
                 {navLinks?.map((item,index)=>{
                     return(
                         <div key={item} className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{
@@ -70,11 +70,11 @@ useEffect(() => {
 
             </div>
         </div>
-        <div className='mt-55 flex flex-col items-center justify-center gap-6'>
-            <h1 className='text-8xl font-bold'>Raju Hoque</h1>
-            <span className='text-3xl' style={{color:"#06112e", fontWeight:"600"}}>FRONTEND SOFTWARE ENGINEER</span>
+        <div className='mt-10 sm:mt-55 flex flex-col items-center justify-center gap-6'>
+            <h1 className=' text-4xl sm:text-8xl font-bold'>Raju Hoque</h1>
+            <span className='text-xl sm:text-3xl' style={{color:"#06112e", fontWeight:"600"}}>FRONTEND SOFTWARE ENGINEER</span>
         </div>
-        <div className='mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer' onClick={()=>{
+        <div className='mt-10 sm:mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer' onClick={()=>{
           getScrollView(0);
         }}>
             <span className='nav-item'>LEARN MORE</span>
