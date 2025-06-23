@@ -78,7 +78,7 @@ useEffect(() => {
                 >Resume</button>
             </div>
         </div>
-        <div className='w-9/10 sm:w-2/5 mt-10 sm:mt-55 flex flex-col  justify-center gap-6 name-wrapper'>
+        <div className='w-9/10 sm:w-2/5 mt-10 sm:mt-auto flex flex-col  justify-center gap-6 name-wrapper'>
           <h3 className='text-xl' style={{'--i':1} as React.CSSProperties}>Hello, I am</h3>
             <h1 className=' text-4xl sm:text-5xl font-bold text-shadow-lg/20' style={{'--i':2} as React.CSSProperties}>Raju Hoque</h1>
             <h2 className='text-xl' style={{'--i':3} as React.CSSProperties}>And I am a  <span className='text-xl sm:text-2xl font-medium intro'> Frontend Developer crafting smooth, responsive, and user-focused web experiences with clean code and a calm mind.</span>
