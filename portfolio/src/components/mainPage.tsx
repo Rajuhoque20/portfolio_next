@@ -125,7 +125,7 @@ const knowledges=[
      "Angular",
     "Node Js",
     "MongoDB",
-    "Bootsrap",
+    "Bootstrap",
     "ECMAScript 6"
 ];
 
