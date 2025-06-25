@@ -3,7 +3,6 @@
   background-size: 100% 100%;
 }
 .header-container{
-    background: conic-gradient(rgb(41, 3, 3), rgb(9, 23, 34), green, blue, black);
      --bg-color:rgb(57, 5, 39);
      background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
 }
@@ -97,7 +96,7 @@
 }
 
 .name-wrapper{
-    --border-radius:0.5rem;
+    --border-radius:5px;
       --background: #2b2d2f;
       background:var(--background) ;
       padding: 1rem;
@@ -117,16 +116,11 @@
     position: absolute;
 }
 .name-wrapper::before{
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-   background-image: conic-gradient(rgb(215, 6, 142) 0deg, transparent 180deg, rgb(215, 6, 142) 180deg, transparent 360deg);
-    border-radius: 0.5rem;
+   background-image: conic-gradient(rgb(215, 6, 142) 0deg, #06f84a 90deg, rgb(215, 6, 142) 180deg, #06f84a 270deg,rgb(215, 6, 142) 360deg);
     inset: -100%;
     width: 300%;
     height: 300%;
-    animation: animate-border 2s linear infinite;
+    animation: animate-border 3.5s linear infinite;
     z-index: -2;
 }
 @keyframes  animate-border  {
@@ -137,7 +131,7 @@
 }
 
 .name-wrapper::after{
-    --inset: 4px;
+    --inset: 3px;
     inset: var(--inset);
     background: #111;
     border-radius: calc(var(--border-radius)-var(--inset));

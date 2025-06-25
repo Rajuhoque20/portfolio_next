@@ -5,6 +5,7 @@ import Experience from './Experience'
 import Projects from './Projects'
 import Contact from './Contact'
 import Footer from './Footer'
+import Work from './Work'
 
 export default function MainPage() {
   return (
@@ -15,6 +16,7 @@ export default function MainPage() {
         <Skills/>
         <Experience/>
         <Projects/>
+        {/* <Work/> */}
         <Contact/>
         <Footer/>
     </div>
@@ -74,15 +76,16 @@ const myPassionData=[
 export const MyPassion=()=>{
     
     return(
-        <div className="my-passon-bg" id="passion">
-            <div className='my-passon-bg-blur flex flex-col p-5 sm:p-30 gap-8' >
+      
+            <div className='my-passon-bg-blur' >
+                <div className='flex flex-col p-5 sm:p-30 gap-8'>
                  <Title>What I Do</Title>
                  <TitleBrake/>
 
-                 <div className='grid grid-cols-1 gap-10 sm:gap-0 sm:grid-cols-2 passion-wrapper'>
+                 <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 passion-wrapper'>
                     {myPassionData?.map((item)=>{
                         return(
-                            <div key={item.title} className='p-0 sm:p-10 gap-3 sm:gap-5 flex flex-col'>
+                            <div key={item.title} className='p-5 sm:p-10 gap-3 sm:gap-5 flex flex-col passion-card'>
 
                                 <SubTitle1>{item.title}</SubTitle1>
                                 <span className='leading-[2]'>{item.content}</span>
@@ -90,10 +93,9 @@ export const MyPassion=()=>{
                         )
                     })}
                  </div>
+                 </div>
 
             </div>
-
-        </div>
     )
 }
 

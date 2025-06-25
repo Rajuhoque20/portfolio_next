@@ -136,7 +136,7 @@ const ProjectWebView=()=>{
                      </ProjectCard>          
                     </foreignObject>
 
-                     <foreignObject x={619} y={600} width={500} height={400} >                    
+                     <foreignObject x={619} y={600} width={500} height={412} >                    
                         <ProjectCard>
                                 <SubTitle1>Elastotec-LaggingSelect</SubTitle1>
                                 <span className='color1 leading-7'> Developed a web portal that allows clients to create and manage projects, conveyors, and pulleys for machine tracking. Enabled analysis of pulley details based on products with graphical representations of simulated outputs. Single-handedly handled UI implementation, code optimization, and feature enhancements. Focused on delivering a seamless and efficient user experience.</span>
@@ -152,7 +152,7 @@ const ProjectWebView=()=>{
                      </ProjectCard>          
                     </foreignObject>
 
-                      <foreignObject x={619} y={1500} width={500} height={400} >                    
+                      <foreignObject x={619} y={1500} width={500} height={412} >                    
                         <ProjectCard>
                                 <SubTitle1>Hiring Management</SubTitle1>
                                 <span className='color1 leading-7'>  Developed a recruitment gateway platform enabling businesses to manage the entire hiring process, including screening, interview scheduling, and shortlisting. Contributed to complete UI implementation using a blend of class and functional components. Utilized Ant Design for UI, along with Redux and Redux Toolkit for state management. Ensured a responsive design optimized for mobile devices.</span>
@@ -234,8 +234,10 @@ export const ProjectMobView=()=>{
 
 export const ProjectCard=({children}:{children:ReactNode})=>{
     return(
-        <div className='comment-wrapper flex flex-col gap-3 p-10 p-relative px-[16px] py-[26px] w-full rounded-sm' >
+        <div className='p-1 w-full'>
+        <div className='project-card flex flex-col gap-3 relative px-[16px] py-[26px] rounded-sm' >
             {children}
+        </div>
         </div>
     )
 }

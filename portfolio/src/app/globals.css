@@ -38,14 +38,39 @@ h1,h2,h3,h4,span{
   background-image: radial-gradient(var(--bg), transparent, var(--bg),transparent,  var(--bg));
 }
 
-.passion-wrapper>:nth-child(1){
-  border-right: 0.5px solid #fff;
-  border-bottom: 0.5px solid #fff;
+.passion-card{
+  position: relative;
+  background: #1b1b1b;
+  border-radius: 5px;
 }
-.passion-wrapper>:nth-child(4){
-  border-top: 0.5px solid #fff;
-  border-left: 0.5px solid #fff;
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
+
+.passion-card::after, .passion-card::before{
+  content: '';
+  position: absolute;
+ inset: -3px;
+  background:conic-gradient( from var(--angle),red,  yellow, rgb(75, 193, 75), red);
+  z-index: -1;
+  border-radius: 5px;
+    animation: blur-effect 2s linear infinite;
+}
+.passion-card::before{
+     filter: blur(20px);
+}
+@keyframes blur-effect  {
+  from {
+    --angle:0deg;
+  }
+  from {
+    --angle:360deg;
+  }
+  
+}
+
 
 .project-bg-blur{
   height: max-content;
@@ -54,10 +79,27 @@ h1,h2,h3,h4,span{
      background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
 }
 
-.comment-wrapper {
-  background-color: #1b1b1b;
-  backdrop-filter: blur(5px);
+
+.project-card-wrapper{
+  padding: 5px;
 }
+.project-card {
+  background-color: #1b1b1b;
+  position: relative;
+}
+
+.project-card::after{
+  content: '';
+  position: absolute;
+ inset: -3px;
+  background:conic-gradient(red,  yellow, green, red);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+
+
+
 
 .color1{
   color: #94a3b8;
@@ -66,17 +108,6 @@ h1,h2,h3,h4,span{
 .contact-bg-blur{
    --bg:rgb(45, 4, 33);
   background-image: radial-gradient(var(--bg), transparent, var(--bg),transparent,  var(--bg));
-}
-
-
-@media (max-width:700px) {
-  
-  .passion-wrapper>:nth-child(1){
- border: 0;
-}
-.passion-wrapper>:nth-child(4){
-  border: 0;
-}
 }
 
 .skill{
