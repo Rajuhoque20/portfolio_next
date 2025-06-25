@@ -5,7 +5,7 @@ import Experience from './Experience'
 import Projects from './Projects'
 import Contact from './Contact'
 import Footer from './Footer'
-import Work from './Work'
+// import Work from './Work'
 
 export default function MainPage() {
   return (
