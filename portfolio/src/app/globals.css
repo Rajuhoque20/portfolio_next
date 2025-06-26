@@ -59,7 +59,7 @@ h1,h2,h3,h4,span{
     animation: blur-effect 2s linear infinite;
 }
 .passion-card::before{
-     filter: blur(20px);
+     filter: blur(5px);
 }
 @keyframes blur-effect  {
   from {
@@ -126,6 +126,29 @@ h1,h2,h3,h4,span{
 .footer{
   --bg-color:#0a192f;
      background-image: conic-gradient(var(--bg-color) 0deg, transparent 30deg,transparent 60deg, var(--bg-color) 90deg, transparent 120deg, transparent 150deg,var(--bg-color) 180deg, transparent 210deg,transparent 240deg, var(--bg-color) 270deg, transparent 300deg,transparent 330deg, var(--bg-color) 360deg);
+}
+.my-photo{
+  isolation: isolate;
+  border-radius: 5px;
+}
+.prof-image{
+   filter:hue-rotate(100deg);
+}
+.prof-image:hover{
+  filter:hue-rotate(0);
+  transform: scale(1.1);
+}
+
+.my-photo::after{
+content: '';
+position: absolute;
+ left: 16px;
+ top: 16px;
+ bottom: -16px;
+ right: -16px;
+border:2px solid #64ffda;
+z-index: -1;
+border-radius: 5px;
 }
 
 

@@ -36,13 +36,13 @@ export const About=()=>{
                 Currently, I work as a frontend engineer at Brigosha, where I focus on accessibility and inclusive design. I help develop and maintain the UI component library that powers our platform, ensuring every interface meets modern web accessibility standards and delivers a seamless experience for all users.
             </span>
             </div>
-            <div className='flex relative p-5 mx-auto w-[350px] h-[350px]'>
+            <div className='flex relative p-5 mx-auto w-[350px] h-[350px] my-photo'>
                 <Image
                 src={'/profile_image.jpg'}
                 alt='raju'
                 fill={true}
                 style={{objectFit:"contain"}}
-                className="filter grayscale hover:grayscale-0 hover:brightness-110 transition-all duration-300"
+                className="transition-all duration-300 rounded-md prof-image"
               
                 />
             </div>
