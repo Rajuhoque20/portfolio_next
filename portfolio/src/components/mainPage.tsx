@@ -10,6 +10,7 @@ import { MyPassion } from './MyPassion'
 import {About} from './About'
 import { useShow } from './hooks/useShow'
 import { Skills } from './Skills'
+import Work from './Work'
 
 export default function MainPage() {
   return (
@@ -20,7 +21,7 @@ export default function MainPage() {
         <Skills/>
         <Experience/>
         <Projects/>
-        {/* <Work/> */}
+        <Work/>
         <Contact/>
         <Footer/>
     </div>

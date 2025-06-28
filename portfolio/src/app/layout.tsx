@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Raju Hoque - Frontend Developer Portfolio",
+  title: "Raju Hoque - Frontend Developer",
   description: "Official portfolio of Raju Hoque. Explore my projects, skills, and work experience as a frontend developer specializing in React, Next.js, and UI engineering.",
   keywords: ["Raju Hoque", "Frontend Developer", "React", "Next.js", "Portfolio"],
   authors: [{ name: "Raju Hoque", url: "https://portfolio-next-xi-bay.vercel.app/" }],

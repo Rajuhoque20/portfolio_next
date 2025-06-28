@@ -169,7 +169,7 @@ border-radius: 5px;
 .el-hidden{
   opacity: 0;
   transform: translateY(50px);
-  transition: 2s all;
+  transition: 1.5s all;
 }
 .el-show{
   opacity: 1;

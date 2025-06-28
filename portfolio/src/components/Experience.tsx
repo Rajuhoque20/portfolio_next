@@ -51,6 +51,6 @@ export const DevelopmentSkills=({skills}:{skills:string[]})=>{
                             </div>
                         )
                     })}
-                 </div>
+        </div>
     )
 }
