@@ -49,18 +49,16 @@ h1,h2,h3,h4,span{
   inherits: false;
 }
 
-.passion-card::after, .passion-card::before{
+.passion-card::before{
   content: '';
   position: absolute;
  inset: -3px;
-  background:conic-gradient( from var(--angle),red,  yellow, rgb(75, 193, 75), red);
+  background:conic-gradient( from var(--angle),rgb(8, 10, 14),  rgb(22, 24, 29), rgb(8, 10, 14));
   z-index: -1;
   border-radius: 5px;
-    animation: blur-effect 2s linear infinite;
+  animation: blur-effect 5s linear infinite;
 }
-.passion-card::before{
-     filter: blur(5px);
-}
+
 @keyframes blur-effect  {
   from {
     --angle:0deg;
@@ -149,6 +147,33 @@ position: absolute;
 border:2px solid #64ffda;
 z-index: -1;
 border-radius: 5px;
+}
+
+.scroll-animation{
+  animation: fadeUp both;
+
+  animation-timeline: scroll();
+
+}
+@keyframes fadeUp {
+  from{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+.el-hidden{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 2s all;
+}
+.el-show{
+  opacity: 1;
+   transform: translateY(0);
 }
 
 

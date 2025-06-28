@@ -1,5 +1,6 @@
 import React from 'react'
 import { SubTitle1, Title, TitleBrake } from './mainPage'
+import { useShow } from './hooks/useShow';
 
 const developmentSkills=[
     "JavaScript",
@@ -18,6 +19,7 @@ const developmentSkills=[
 ];
 
 export default function Experience() {
+    useShow("el-hidden", "el-show");
   return (
     <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8 experience'  id="Experience">
         <Title>Experience</Title>
@@ -30,7 +32,7 @@ export default function Experience() {
            
                  <SubTitle1>Software Frontend Engineer, Brigosha</SubTitle1>
           
-                 <span className='leading-7 color1'>Effectively utilized version control tools for source code management in various projects. Analyzed user requirements to develop software solutions and created technical specifications. Optimized existing software systems for improved performance and scalability. Participated in continuous learning opportunities to stay current with emerging technologies. Integrated third-party APIs and services to enhance software functionality and interoperability. Developed and maintained scalable software applications for various platforms. Collaborated with UI/UX designers to improve software usability and user experience. Utilized variety of engineering languages to develop web applications.</span>
+                 <span className='leading-7 color1 el-hidden'>Effectively utilized version control tools for source code management in various projects. Analyzed user requirements to develop software solutions and created technical specifications. Optimized existing software systems for improved performance and scalability. Participated in continuous learning opportunities to stay current with emerging technologies. Integrated third-party APIs and services to enhance software functionality and interoperability. Developed and maintained scalable software applications for various platforms. Collaborated with UI/UX designers to improve software usability and user experience. Utilized variety of engineering languages to develop web applications.</span>
                  <DevelopmentSkills skills={developmentSkills}/>
             </div>
         </div>
@@ -39,11 +41,12 @@ export default function Experience() {
 }
 
 export const DevelopmentSkills=({skills}:{skills:string[]})=>{
+    
     return(
         <div className='flex gap-5 flex-wrap'>
                     {skills?.map((item)=>{
                         return(
-                            <div key={item} className='py-2 px-5 bg-neutral-500 rounded-2xl' style={{color:"#5eead4", background:"#2dd4bf1a"}}>
+                            <div key={item} className='py-2 px-5 bg-neutral-500 rounded-2xl el-hidden' style={{color:"#5eead4", background:"#2dd4bf1a"}}>
                                 <span >{item}</span>
                             </div>
                         )

@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { SubTitle1, Title, TitleBrake } from './mainPage'
 import { DevelopmentSkills } from './Experience'
+import { useShow } from './hooks/useShow';
 
 const locoSkills=[
     "React",
@@ -81,6 +82,7 @@ export default function Projects() {
   )
 }
 const ProjectWebView=()=>{
+      useShow("el-hidden", "el-show");
     return(
         <div className='mt-0 sm:mt-10'>
                 
@@ -131,7 +133,7 @@ const ProjectWebView=()=>{
                     <foreignObject x={0} y={50} width={500} height={600} >                    
                         <ProjectCard>
                                 <SubTitle1>LocoSim – Locomotive Simulation</SubTitle1>
-                                <span className='color1 leading-7'>Built a real-time simulation platform to monitor train movement, speed, and location for driver training purposes. Integrated a Driver Display Unit (DDU) to visualize live track details such as signals, signage, curvature, and gradient during motion. Simulated accurate train behavior across varying route conditions. Focused on responsive UI and seamless real-time data rendering for high-fidelity simulations.</span>
+                                <span className='color1 leading-7 el-hidden'>Built a real-time simulation platform to monitor train movement, speed, and location for driver training purposes. Integrated a Driver Display Unit (DDU) to visualize live track details such as signals, signage, curvature, and gradient during motion. Simulated accurate train behavior across varying route conditions. Focused on responsive UI and seamless real-time data rendering for high-fidelity simulations.</span>
                                  <DevelopmentSkills skills={locoSkills}/>
                      </ProjectCard>          
                     </foreignObject>
@@ -139,7 +141,7 @@ const ProjectWebView=()=>{
                      <foreignObject x={619} y={600} width={500} height={412} >                    
                         <ProjectCard>
                                 <SubTitle1>Elastotec-LaggingSelect</SubTitle1>
-                                <span className='color1 leading-7'> Developed a web portal that allows clients to create and manage projects, conveyors, and pulleys for machine tracking. Enabled analysis of pulley details based on products with graphical representations of simulated outputs. Single-handedly handled UI implementation, code optimization, and feature enhancements. Focused on delivering a seamless and efficient user experience.</span>
+                                <span className='color1 leading-7 el-hidden'> Developed a web portal that allows clients to create and manage projects, conveyors, and pulleys for machine tracking. Enabled analysis of pulley details based on products with graphical representations of simulated outputs. Single-handedly handled UI implementation, code optimization, and feature enhancements. Focused on delivering a seamless and efficient user experience.</span>
                                  <DevelopmentSkills skills={elastotecSkills}/>
                      </ProjectCard>          
                     </foreignObject>
@@ -147,7 +149,7 @@ const ProjectWebView=()=>{
                     <foreignObject x={0} y={1050} width={500} height={400} >                    
                         <ProjectCard>
                                 <SubTitle1>NEW PMT</SubTitle1>
-                                <span className='color1 leading-7'> Built an online portal to manage associate, department, team, and project profiles, along with tracking attendance, leaves, and overall organizational activities. Led the complete UI implementation with custom global components like tables and modals. Introduced Zustand for efficient state management. Ensured full mobile responsiveness using media queries.</span>
+                                <span className='color1 leading-7 el-hidden'> Built an online portal to manage associate, department, team, and project profiles, along with tracking attendance, leaves, and overall organizational activities. Led the complete UI implementation with custom global components like tables and modals. Introduced Zustand for efficient state management. Ensured full mobile responsiveness using media queries.</span>
                                  <DevelopmentSkills skills={pmtSkills}/>
                      </ProjectCard>          
                     </foreignObject>
@@ -155,7 +157,7 @@ const ProjectWebView=()=>{
                       <foreignObject x={619} y={1500} width={500} height={412} >                    
                         <ProjectCard>
                                 <SubTitle1>Hiring Management</SubTitle1>
-                                <span className='color1 leading-7'>  Developed a recruitment gateway platform enabling businesses to manage the entire hiring process, including screening, interview scheduling, and shortlisting. Contributed to complete UI implementation using a blend of class and functional components. Utilized Ant Design for UI, along with Redux and Redux Toolkit for state management. Ensured a responsive design optimized for mobile devices.</span>
+                                <span className='color1 leading-7 el-hidden'>  Developed a recruitment gateway platform enabling businesses to manage the entire hiring process, including screening, interview scheduling, and shortlisting. Contributed to complete UI implementation using a blend of class and functional components. Utilized Ant Design for UI, along with Redux and Redux Toolkit for state management. Ensured a responsive design optimized for mobile devices.</span>
                                  <DevelopmentSkills skills={hiringSkills}/>
                      </ProjectCard>          
                     </foreignObject>
@@ -163,7 +165,7 @@ const ProjectWebView=()=>{
                     <foreignObject x={0} y={2000} width={500} height={400} >                    
                         <ProjectCard>
                                 <SubTitle1>Ibelong</SubTitle1>
-                                <span className='color1 leading-7'>Developed a web portal for company associates to nominate and participate in events like sports, music, dance, photography, and acting. Collaborated with the team to implement the UI and integrate APIs. Introduced Redux Toolkit for efficient state management. Ensured full mobile responsiveness for an optimized user experience across devices.</span>
+                                <span className='color1 leading-7 el-hidden'>Developed a web portal for company associates to nominate and participate in events like sports, music, dance, photography, and acting. Collaborated with the team to implement the UI and integrate APIs. Introduced Redux Toolkit for efficient state management. Ensured full mobile responsiveness for an optimized user experience across devices.</span>
                                 <DevelopmentSkills skills={hiringSkills}/>
                      </ProjectCard>        
                     </foreignObject>
@@ -215,13 +217,14 @@ const ProjectWebView=()=>{
     )
 }
 export const ProjectMobView=()=>{
+     useShow("el-hidden", "el-show");
     return(
         <div className='flex sm:hidden flex-col gap-5'>
             {projects?.map((item)=>{
                 return(
                      <ProjectCard key={item?.title}>
                                 <SubTitle1>{item?.title}</SubTitle1>
-                                <span className='color1 leading-7'>{item?.content}</span>
+                                <span className='color1 leading-7 el-hidden'>{item?.content}</span>
                                  <DevelopmentSkills skills={item?.skills}/>
                      </ProjectCard>       
 
@@ -234,7 +237,7 @@ export const ProjectMobView=()=>{
 
 export const ProjectCard=({children}:{children:ReactNode})=>{
     return(
-        <div className='p-1 w-full'>
+        <div className='p-1 w-full el-hidden'>
         <div className='project-card flex flex-col gap-3 relative px-[16px] py-[26px] rounded-sm' >
             {children}
         </div>

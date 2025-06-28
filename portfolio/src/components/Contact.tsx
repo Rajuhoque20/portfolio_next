@@ -2,6 +2,7 @@
 'use client'
 import React, { useRef, useState } from 'react'
 import { Title } from './mainPage'
+import { useShow } from './hooks/useShow';
 interface FormData{
     name:string,
     email:string,
@@ -10,6 +11,7 @@ interface FormData{
 }
 
 export default function Contact() {
+      useShow("el-hidden", "el-show");
     const [response, setResponse]=useState({
         message:"",
         status:""
@@ -72,19 +74,19 @@ export default function Contact() {
                  
                     sendEmail({name, email, subject,message});
                 }}>
-                    <div className='flex flex-col gap-3'>
+                    <div className='flex flex-col gap-3 el-hidden'>
                         <label htmlFor='name'>NAME</label>
                         <input required type='text' name='name' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0' placeholder='Enter name'/>
                     </div>
-                     <div className='flex flex-col gap-3'>
+                     <div className='flex flex-col gap-3 el-hidden'>
                         <label htmlFor='name'>EMAIL</label>
                         <input required type='text' name='email' placeholder='Enter email' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
-                     <div className='flex flex-col gap-3'>
+                     <div className='flex flex-col gap-3 el-hidden'>
                         <label htmlFor='name'>SUBJECT</label>
                         <input required type='text' name='subject' placeholder='Enter subject' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
-                    <div className='flex flex-col gap-3'>
+                    <div className='flex flex-col gap-3 el-hidden'>
                         <label htmlFor='name'>MESSAGE</label>
                         <input required type='text'  name='message' placeholder='Enter message' className='h-[60px] rounded-sm px-5 border-2 border-indigo-200 border-y-indigo-500 outline-0'/>
                     </div>
@@ -96,7 +98,7 @@ export default function Contact() {
                     <span className='text-red-500 mx-auto'> {response?.message}</span>
                     }
 
-                    <button type='submit' className=' transition-transform hover:scale-110 border-2 border-purple-500 text-purple-500 px-12 py-4 rounded-sm w-max mx-auto cursor-pointer'>{buttonText}</button>
+                    <button type='submit' className=' transition-transform hover:scale-110 border-2 border-purple-500 text-purple-500 px-12 py-4 rounded-sm w-max mx-auto cursor-pointer el-hidden'>{buttonText}</button>
                 </form>
 
             </div>

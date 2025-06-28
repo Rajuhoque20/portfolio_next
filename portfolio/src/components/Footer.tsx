@@ -24,7 +24,7 @@ export default function Footer() {
         <FaGithub size={30} />
       </a>
     </div>
-        <span>@ Raju Hoque 2025</span>
+      <span className="text-sm text-gray-400">&copy; Raju Hoque 2025</span>
     </div>
   )
 }

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { HiArrowCircleUp } from "react-icons/hi";
 import "./Header.css";
+import { useShow } from './hooks/useShow';
 const navLinks=[
     "About",
      "Skills",
@@ -12,6 +13,7 @@ const navLinks=[
 ];
 
 export default function Header() {
+    useShow("el-hidden", "el-show")
   const headerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 useEffect(() => {
@@ -51,7 +53,7 @@ useEffect(() => {
   return (
     <div className='w-full h-1/3 sm:h-screen bakground-image-header' id="header" >
       <div className='header-container h-full w-full flex flex-col place-items-center' >
-        <div className='flex items-center justify-between w-full p-8 navbar' ref={headerRef}>
+        <div className='flex items-center justify-between w-full p-8 navbar el-hidden' ref={headerRef}>
               <div 
                   className="text-3xl w-[40px] h-[40px] inline-flex items-center justify-center rounded-sm letter-icon">
                     <span style={{'--nav-item':1} as React.CSSProperties }>R</span>
@@ -78,13 +80,13 @@ useEffect(() => {
                 >Resume</button>
             </div>
         </div>
-        <div className='w-9/10 sm:w-2/5 mt-10 sm:mt-auto flex flex-col  justify-center gap-6 name-wrapper'>
+        <div className='w-9/10 sm:w-2/5 mt-10 sm:mt-auto flex flex-col  justify-center gap-6 name-wrapper el-hidden'>
           <h3 className='text-xl' style={{'--i':1} as React.CSSProperties}>Hello, I am</h3>
             <h1 className=' text-4xl sm:text-3xl font-bold text-shadow-lg/20' style={{'--i':2} as React.CSSProperties}>Raju Hoque</h1>
             <h2 className='text-xl' style={{'--i':3} as React.CSSProperties}>And I am a  <span className='text-xl sm:text-xl font-medium intro'> Frontend Developer crafting smooth, responsive, and user-focused web experiences with clean code and a calm mind.</span>
             </h2>
         </div>
-        <div className='mt-10 sm:mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer learn-more' style={{'--i':4} as React.CSSProperties}  onClick={()=>{
+        <div className='mt-10 sm:mt-auto mb-10 flex flex-col gap-3 justify-center items-center cursor-pointer learn-more el-hidden' style={{'--i':4} as React.CSSProperties}  onClick={()=>{
           getScrollView(0);
         }}>
             <span className='nav-item'>LEARN MORE</span>

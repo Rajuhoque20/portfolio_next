@@ -46,6 +46,7 @@ const WorkSamples=[
 ];
 
 export default function Work() {
+
   return (
               <div className='w-full p-5 sm:p-30 flex flex-col gap-3 sm:gap-8 skill h-max w-full'>
                 <Title>Some of My Work</Title>
