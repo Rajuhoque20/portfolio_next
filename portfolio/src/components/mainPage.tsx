@@ -14,7 +14,7 @@ import Work from './Work'
 
 export default function MainPage() {
   return (
-    <div  className="w-full h-max flex flex-col h-max overflow-y-auto overflow-x-hidden">
+    <div  className="w-full flex flex-col h-max overflow-y-auto overflow-x-hidden">
         <Header/>
         <About/>
         <MyPassion/>

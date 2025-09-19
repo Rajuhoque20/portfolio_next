@@ -20,7 +20,7 @@ export const About=()=>{
             <div className='flex relative p-5 mx-auto w-[350px] h-[350px] my-photo el-hidden'>
                 <Image
                 src={'/profile_image.jpg'}
-                alt='raju'
+                alt='Raju Hoque Profile'
                 fill={true}
                 style={{objectFit:"contain"}}
                 className="transition-all duration-300 rounded-md prof-image"
