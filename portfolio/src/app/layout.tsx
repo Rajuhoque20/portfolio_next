@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Raju Hoque Portfolio",
     images: [
       {
-        url: "https://rajuhoque.com/pprofile_image.jpg",
+        url: "https://rajuhoque.com/profile_image.jpg",
         width: 1200,
         height: 630,
         alt: "Raju Hoque Portfolio Preview",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Raju Hoque | Portfolio",
     description: "Portfolio of Raju Hoque, Frontend Developer.",
-    images: ["https://rajuhoque.com/pprofile_image.jpg"],
+    images: ["https://rajuhoque.com/profile_image.jpg"],
   },
 };
 
