@@ -24,15 +24,15 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Raju Hoque | Frontend Developer",
+  title: "Raju Hoque | Software Engineer",
   description: "Official portfolio of Raju Hoque. Explore my projects, skills, and work experience as a frontend developer specializing in React, Next.js, and UI engineering.",
-  keywords: ["Raju Hoque", "Frontend Developer", "React", "Next.js", "Portfolio"],
+  keywords: ["Raju Hoque", "Frontend Developer","Web Developer", "Website Developer","Software Engineer", "React", "Next.js", "Portfolio", "Raju","Raju Hok", "Raju Haq","Raju Haque", "Raju Hok","Raju Hoq","Raju Hak", "Raju Hoque Engineer","Raju Software Engineer","Raju Web Developer", "Raju Website Developer","Raju Hoque Software Engineer","top 10 portfolio","top 10 portfolioes","top 10 software engineers","top 10 website developers","top 10 web developers"],
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: "Raju Hoque | Portfolio",
-    description: "Portfolio of Raju Hoque, Frontend Developer.",
+    description: "Portfolio of Raju Hoque, Software Engineer.",
     url: "https://rajuhoque.com/",
     siteName: "Raju Hoque Portfolio",
     images: [

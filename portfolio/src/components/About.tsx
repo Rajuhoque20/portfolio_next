@@ -11,10 +11,10 @@ export const About=()=>{
            <Title>Hey, I&apos;m Raju.</Title>
             <TitleBrake/>
             <span className='leading-[2] el-hidden'>
-                I am a front-end developer with a strong passion for building accessible, pixel-perfect user interfaces that harmonize design and engineering. I thrive at the intersection of aesthetics and functionality—crafting experiences that are visually refined, technically robust, and optimized for both performance and usability
+                I am a frontend Developer with a strong passion for building accessible, pixel-perfect user interfaces that harmonize design and engineering. I thrive at the intersection of aesthetics and functionality—crafting experiences that are visually refined, technically robust, and optimized for both performance and usability
             </span>
             <span className='leading-[2] el-hidden'>
-                Currently, I work as a frontend engineer at Brigosha, where I focus on accessibility and inclusive design. I help develop and maintain the UI component library that powers our platform, ensuring every interface meets modern web accessibility standards and delivers a seamless experience for all users.
+                Currently, I work as a frontend Engineer at Brigosha, where I focus on accessibility and inclusive design. I help develop and maintain the UI component library that powers our platform, ensuring every interface meets modern web accessibility standards and delivers a seamless experience for all users.
             </span>
             </div>
             <div className='flex relative p-5 mx-auto w-[350px] h-[350px] my-photo el-hidden'>

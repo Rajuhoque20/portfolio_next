@@ -75,7 +75,7 @@ useEffect(() => {
                 </div>
                 <button style={{'--nav-item':7} as React.CSSProperties } className='resume-button outline-none rounded-md px-3 py-2 cursor-pointer'
                 onClick={()=>{
-                  window.open('/CV_Raju_Hoque_2025.pdf','_blank')
+                  window.open('/Raju_Hoque_CV_2025.pdf','_blank');
                 }}
                 >Resume</button>
             </div>

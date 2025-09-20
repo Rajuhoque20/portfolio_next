@@ -129,11 +129,11 @@ h1,h2,h3,h4,span{
   isolation: isolate;
   border-radius: 5px;
 }
-.prof-image{
+/* .prof-image{
    filter:hue-rotate(100deg);
-}
+} */
 .prof-image:hover{
-  filter:hue-rotate(0);
+  filter:hue-rotate(100deg);
   transform: scale(1.1);
 }
 
